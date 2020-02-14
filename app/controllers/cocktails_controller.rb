@@ -13,6 +13,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.name = @cocktail.name.capitalize
     if @cocktail.save
       redirect_to cocktails_path(@cocktail)
     else

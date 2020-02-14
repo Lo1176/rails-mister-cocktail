@@ -1,6 +1,8 @@
-<h2> <%= @cocktail.name.capitalize %> </h2>
+<h2> <%= @cocktail.name %> </h2>
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
-  <%= f.association :ingredient %>
+  <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false%>
   <%= f.input :description %>
-  <%= f.submit %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
+
+<%= link_to "⮐ Go back", cocktails_path %>

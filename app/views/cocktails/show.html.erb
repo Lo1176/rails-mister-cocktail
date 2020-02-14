@@ -5,7 +5,10 @@
   <% @cocktail.ingredients.each do |ingredient| %>
     <li class="list-group-item"><%= ingredient.name %></li>
   <% end %>
+  <% @cocktail.doses.each do |dose| %>
+    <li class="list-group-item"><%= dose.description %></li>
+  <% end %>
 </ul>
 
-<%= link_to 'add dose ', new_cocktail_dose_path(@cocktail) %>
+<%= link_to 'add a new dose ', new_cocktail_dose_path(@cocktail) %>
 <%= link_to "⮐ Go back", cocktails_path %>
