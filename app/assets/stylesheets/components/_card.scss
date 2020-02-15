@@ -28,3 +28,45 @@
 
     }
 }
+
+.card-info {
+  background-color: $card-info;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+              0 2px 2px rgba(0,0,0,0.12),
+              0 4px 4px rgba(0,0,0,0.12),
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+  color: white;
+  font-size: 16px;
+  padding: 1.25rem;
+
+    .list-group {
+
+    }
+
+    .list-group-item {
+      background: none;
+      padding : 0.75rem 1.25rem 0.75rem 0;
+
+    }
+}
+
+.card-border {
+  border: thick double rgba(242, 229, 196, 0.9);
+  border-radius: 5px;
+  padding: 0.75rem;
+  margin: 0 16px;
+
+    .btn-outline-info {
+        color: #f2e5c4;
+        border-color: #f2e5c4;
+    }
+    .btn-outline-info:hover {
+        color: #222B34;
+        background-color: #f2e5c4;
+        border-color: #f2e5c4;
+    }
+
+
+}

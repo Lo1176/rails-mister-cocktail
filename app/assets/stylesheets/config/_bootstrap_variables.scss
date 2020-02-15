@@ -6,14 +6,15 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $light-gray;
+// $body-bg:                 $light-gray;
+$body-bg:                 #F2E5C4;
 $font-size-base: 1rem;
 
 // Colors
 $body-color: $gray;
 $primary:    $blue;
 $success:    $green;
-$info:       $yellow;
+$info:       #222B34;
 $danger:     $red;
 $warning:    $orange;
 
@@ -22,4 +23,5 @@ $border-radius:    2px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
-// Override other variables below!
+// Cards color
+$card-info:           #222B34;

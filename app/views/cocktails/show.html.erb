@@ -1,15 +1,48 @@
-<h2><%= @cocktail.name %></h2>
 
-<p>Here is the ingredients</p>
-<ul class="list-group">
-  <% @cocktail.ingredients.each do |ingredient| %>
-    <li class="list-group-item"><%= ingredient.name %></li>
-  <% end %>
-  <% @cocktail.doses.each do |dose| %>
-    <li class="list-group-item"><%= dose.description %></li>
-  <% end %>
-</ul>
+<div class="container mt-3 w-100">
+  <div class="row">
+    <div class="col-12 cocktail-name">
+      <h3 class="text-center">Want to modify the doses?</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-lg-4  card-info mx-1">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@cocktail.photo.key, height: 300, width: 400, crop: :fill) %>)">
+        <%= @cocktail.name %>
+      </div>
 
 
-<%= link_to 'add a new dose ', new_cocktail_dose_path(@cocktail) %>
-<%= link_to "⮐ Go back", cocktails_path %>
+
+
+    </div>
+    <div class="col-sm-12 col-lg-6 cocktail-card mx-1">
+      <div class="row card-info">
+        <div class="card-border">
+          <ul class="list-group">
+          <h4>Ingrédients</h4>
+            <% @cocktail.doses.each do |dose| %>
+              <li class="list-group-item"><%= dose.description %> <%= dose.ingredient.name %>
+                <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+                    <i class="far fa-trash-alt destroy_dose"></i>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="card-border">
+          <h5>Doses</h5>
+        <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+</div>
