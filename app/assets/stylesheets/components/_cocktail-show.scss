@@ -9,4 +9,7 @@
 
 .doses {
   display: flex;
+    abbr[title], abbr[data-original-title] {
+      display: none;
+    }
 }
