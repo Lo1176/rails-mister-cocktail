@@ -50,6 +50,7 @@
     .list-group-item {
       background: none;
       padding : 0.75rem 1.25rem 0.75rem 0;
+      border: none;
 
     }
 }
@@ -58,7 +59,7 @@
   border: thick double rgba(242, 229, 196, 0.9);
   border-radius: 5px;
   padding: 0.75rem;
-  margin: 0 16px;
+  margin: 0 4px;
 
     .btn-outline-info {
         color: #f2e5c4;
