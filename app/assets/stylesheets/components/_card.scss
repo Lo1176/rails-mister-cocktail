@@ -1,7 +1,14 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .card-category {
   background-size: cover;
   background-position: center;
   height: 180px;
+  width: 272px;
   display: flex;
   justify-content: center;
   align-items: center;
