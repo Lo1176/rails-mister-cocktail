@@ -8,7 +8,7 @@
   background-size: cover;
   background-position: center;
   height: 180px;
-  width: 272px;
+  // width: 272px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +37,8 @@
 }
 
 .card-info {
+  width: 336px;
+  justify-content: center;
   background-color: $card-info;
   border-radius: 5px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.12),
@@ -47,7 +49,7 @@
   color: white;
   font-size: 16px;
   padding: 1.25rem;
-  margin-bottom: 16px;
+  margin: 8px;
 
     .list-group {
 
