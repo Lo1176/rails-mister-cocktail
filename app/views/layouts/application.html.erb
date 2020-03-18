@@ -13,42 +13,7 @@
 
   <body>
     <div class="page-container">
-      <div class="navbar navbar-expand-sm navbar-light navbar-cocktails px-5">
-        <div class="">
-          <%= link_to "#", class: "navbar-brand" do %>
-            <%= image_tag "cocktail.png" %>
-          <% end %>
-        </div>
-
-        <div class="ml6 pt-4">
-          <h1 class="">
-            <span class="text-wrapper">
-              <span class="letters"><strong>Pimp</strong> my <strong>Cocktails</strong> </span>
-            </span>
-          </h1>
-
-
-        </div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <%= link_to "Home", cocktails_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Add a cocktail 🍸', new_cocktail_path, class: "btn btn-outline-info mx-5" %>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-
+      <%= render 'shared/navbar', content_for(:navbar_class, 'navbar-home') %>
 
       <%= yield %>
 
