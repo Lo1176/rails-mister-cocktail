@@ -1,11 +1,15 @@
 .navbar-home {
-  background: red !important;
+  position: fixed !important;
+  justify-content: space-between;
+  background: white;
+  height: 72px;
+  top: 0px;
+  width: -webkit-fill-available;
 }
 
 .navbar-cocktails {
   justify-content: space-between;
   background: white;
-  height: 16px;
   position: sticky;
   height: 72px;
   top: 0px;
