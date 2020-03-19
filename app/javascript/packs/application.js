@@ -12,8 +12,8 @@ require('sweetalert2/dist/sweetalert2.min')
 import 'bootstrap';
 
 document.addEventListener('turbolinks:load', () => {
-  initSweetalert();
-  initTyped();
+  // initSweetalert();
+  // initTyped();
   // etc...
 });
 
