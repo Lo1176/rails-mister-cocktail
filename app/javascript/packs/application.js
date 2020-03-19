@@ -27,7 +27,7 @@ document.addEventListener('turbolinks:load', () => {
 var textWrapper = document.querySelector('.ml6 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
+anime.timeline({loop: false})
   .add({
     targets: '.ml6 .letter',
     translateY: ["1.1em", 0],
@@ -36,7 +36,7 @@ anime.timeline({loop: true})
     delay: (el, i) => 50 * i
   }).add({
     targets: '.ml6',
-    opacity: 0,
+    opacity: 1,
     duration: 1000,
     easing: "easeOutExpo",
     delay: 1000
