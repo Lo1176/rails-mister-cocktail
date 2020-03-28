@@ -1,7 +1,7 @@
 <div class="navbar-wagon <%= yield(:navbar_class) %>">
   <div class="navbar navbar-expand-sm navbar-light navbar-cocktails px-5">
     <div class="">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to cocktails_path, class: "navbar-brand" do %>
         <%= image_tag "cocktail.png" %>
       <% end %>
     </div>
@@ -24,9 +24,6 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to "Home", cocktails_path, class: "nav-link" %>
-        </li>
         <li class="nav-item">
           <%= link_to 'Add a cocktail 🍸', new_cocktail_path, class: "btn btn-outline-info mx-5" %>
         </li>

@@ -14,7 +14,7 @@ const initLogo = () => {
       delay: (el, i) => 50 * i
     }).add({
       targets: '.ml6',
-      opacity: 1,
+      opacity: 0,
       duration: 1000,
       easing: "easeOutExpo",
       delay: 1000
