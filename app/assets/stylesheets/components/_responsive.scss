@@ -1,3 +1,31 @@
-.lg .text-wrapper {
-  display: none;
+// set defaults
+// #logo { display: none; }
+
+
+// Desktop and landscape tablets
+
+
+
+
+// Portrait tablets and landscape mobiles
+
+@media (max-width: 767px) {
+    #logo {
+    display: none;
+    }
+}
+
+// Portrait mobiles
+@media (max-width: 540px) {
+    .banner {
+      display: none;
+    }
+    .cards {
+      padding-top: 34px;
+
+    }
+    .btn-outline-info {
+      background-color: white;
+
+    }
 }
