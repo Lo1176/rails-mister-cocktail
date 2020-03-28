@@ -1,17 +1,19 @@
 .navbar-home {
   position: fixed !important;
   justify-content: space-between;
+  // align-content: center;
   background: white;
-  height: 72px;
+  height: 64px;
   top: 0px;
   width: -webkit-fill-available;
 }
 
 .navbar-cocktails {
   justify-content: space-between;
+  // align-content: center;
   background: white;
   position: sticky;
-  height: 72px;
+  height: 64px;
   top: 0px;
   width: -webkit-fill-available;
 }
@@ -25,7 +27,8 @@
 }
 
 .navbar-nav {
-  text-align: end;
+  // text-align: end;
+  // margin-top: 4px;
 }
 
 .ml6 {
@@ -37,7 +40,7 @@
 .ml6 .text-wrapper {
   position: relative;
   display: inline-block;
-  padding-top: 0.2em;
+  // padding-top: 0.2em;
   padding-right: 0.05em;
   padding-bottom: 0.1em;
   overflow: hidden;

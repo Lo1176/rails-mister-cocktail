@@ -3,6 +3,19 @@
 
 
 // Desktop and landscape tablets
+@media (min-width: 768px) {
+.container, .container-sm, .container-md {
+    // max-width: 760px;
+}
+}
+
+
+
+@media (min-width: 576px) {
+  #home-menu {
+    display: none;
+  }
+}
 
 
 
@@ -12,6 +25,29 @@
 @media (max-width: 767px) {
     #logo {
     display: none;
+    }
+    .navbar-nav {
+      position: absolute;
+      right: 48px;
+      // width: 156px;
+      background: white;
+      border: $info 1px solid;
+
+    }
+    #navbarSupportedContent {
+      // width: 156px;
+      height: 0px !important;
+      .btn-outline-info:hover {
+        background-color: $info;
+      }
+
+    }
+
+    #drop-down-menu-burger {
+      background-color: white;
+      border: none;
+      width: 100%;
+      text-align: left;
     }
 }
 
@@ -24,8 +60,5 @@
       padding-top: 34px;
 
     }
-    .btn-outline-info {
-      background-color: white;
 
-    }
 }
