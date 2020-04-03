@@ -10,23 +10,25 @@
 
 <div class="container my-5">
   <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-      <div class="">
-        <% if cocktail.photo.attached? %>
-          <%= link_to cocktail_path(cocktail) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key, height: 300, width: 400, crop: :fill) %>)">
-              <%= cocktail.name %>
-            </div>
-          <% end %>
+    <% if @cocktails %>
+      <% @cocktails.each do |cocktail| %>
+        <div class="">
+          <% if cocktail.photo.attached? %>
+            <%= link_to cocktail_path(cocktail) do %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key, height: 300, width: 400, crop: :fill) %>)">
+                <%= cocktail.name %>
+              </div>
+            <% end %>
 
-        <% else %>
-          <%= link_to cocktail_path(cocktail) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')">
-              <%= cocktail.name %>
-            </div>
-          <% end %>
-         <% end %>
-      </div>
+          <% else %>
+            <%= link_to cocktail_path(cocktail) do %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')">
+                <%= cocktail.name %>
+              </div>
+            <% end %>
+           <% end %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
