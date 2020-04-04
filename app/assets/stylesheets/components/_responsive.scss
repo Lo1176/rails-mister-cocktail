@@ -4,9 +4,9 @@
 
 // Desktop and landscape tablets
 @media (min-width: 768px) {
-.container, .container-sm, .container-md {
+  .container, .container-sm, .container-md {
     // max-width: 760px;
-}
+  }
 }
 
 
@@ -18,7 +18,11 @@
 }
 
 
-
+@media (max-width: 992px) {
+  .footer-new {
+    position: relative;
+  }
+}
 
 // Portrait tablets and landscape mobiles
 
