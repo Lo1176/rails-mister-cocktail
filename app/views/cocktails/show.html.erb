@@ -35,13 +35,27 @@
     </div>
   </div>
 
-  <h5>Reviews</h5>
-  <% if @cocktail.reviews.empty? %>
-    <p>Be the first to let a review</p>
-  <% else %>
+  <div class="card-info reviews">
+    <h5>Reviews</h5>
+    <% if @cocktail.reviews.empty? %>
+      <p>Be the first to let a review</p>
+    <% else %>
+      <ul>
+        <% @cocktail.reviews.each do |review| %>
+          <li>
+            <span> class="badge badge-primary badge-pill
 
-  <% end %>
-  <%= render 'reviews/new', cocktail: @cocktail, review: @review %>
+            </span>
+            <%= review.content %>
+          </li>
+        <% end %>
+
+      </ul>
+
+    <% end %>
+    <%= render "reviews/new", cocktail: @cocktail, review: @review %>
+
+  </div>
 </div>
 
 <%= render 'shared/footer', content_for(:footer_class, 'footer-new') %>
