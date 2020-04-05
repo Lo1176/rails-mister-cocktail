@@ -1,5 +1,6 @@
 class DosesController < ApplicationController
-  before_action :set_cocktail, except: :destroy
+  before_action :find_cocktail, except: :destroy
+
   def new
     # @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new
@@ -8,7 +9,7 @@ class DosesController < ApplicationController
   def create
     # @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new(dose_params)
-    @dose.cocktail = @cocktail
+    @dose.cocktail = @cocktails
     if @dose.save
       redirect_to cocktail_path(@dose.cocktail)
     else
@@ -25,7 +26,7 @@ class DosesController < ApplicationController
 
   private
 
-  def set_cocktail
+  def find_cocktail
     @cocktail = Cocktail.find(params[:cocktail_id])
   end
 
