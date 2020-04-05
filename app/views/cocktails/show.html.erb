@@ -34,6 +34,14 @@
       </div>
     </div>
   </div>
+
+  <h5>Reviews</h5>
+  <% if @cocktail.reviews.empty? %>
+    <p>Be the first to let a review</p>
+  <% else %>
+
+  <% end %>
+  <%= render 'reviews/new', cocktail: @cocktail, review: @review %>
 </div>
 
 <%= render 'shared/footer', content_for(:footer_class, 'footer-new') %>
