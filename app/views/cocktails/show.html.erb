@@ -3,14 +3,37 @@
 <div class="container mt-3 w-100">
   <div class="">
     <div class="cocktail-name mt-5">
-      <h2 class="text-center">Want to change the doses?</h2>
+      <h2 class="text-center">~ <%=@cocktail.name%> ~</h2>
     </div>
   </div>
   <div class="cock-cont my-4">
     <div class="card-info description">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@cocktail.photo.key, height: 300, width: 400, crop: :fill) %>)">
-        <%= @cocktail.name %>
       </div>
+      <div class="card-border">
+        <h5>Reviews</h5>
+        <% if @cocktail.reviews.empty? %>
+          <p>Be the first to let a review</p>
+        <% else %>
+          <ul>
+            <% @cocktail.reviews.each do |review| %>
+              <li>
+                <span> class="badge badge-primary badge-pill
+
+                </span>
+                <%= review.content %>
+              </li>
+            <% end %>
+
+          </ul>
+
+        <% end %>
+
+      </div>
+      <!-- <div class="modal"> -->
+
+
+      <!-- </div> -->
     </div>
     <div class="cocktail-card">
       <div class="card-info doses">
@@ -34,28 +57,7 @@
       </div>
     </div>
   </div>
-
-  <div class="card-info reviews">
-    <h5>Reviews</h5>
-    <% if @cocktail.reviews.empty? %>
-      <p>Be the first to let a review</p>
-    <% else %>
-      <ul>
-        <% @cocktail.reviews.each do |review| %>
-          <li>
-            <span> class="badge badge-primary badge-pill
-
-            </span>
-            <%= review.content %>
-          </li>
-        <% end %>
-
-      </ul>
-
-    <% end %>
-    <%= render "reviews/new", cocktail: @cocktail, review: @review %>
-
-  </div>
+  <%= render 'reviews/new', cocktail: @cocktail, review: @review %>
 </div>
 
 <%= render 'shared/footer', content_for(:footer_class, 'footer-new') %>
