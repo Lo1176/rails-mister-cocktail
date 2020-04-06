@@ -15,3 +15,11 @@
   display: flex;
   justify-content: space-between;
 }
+
+.li-review {
+  padding-left: 0;
+    li {
+      list-style-type: none;
+    }
+
+}
