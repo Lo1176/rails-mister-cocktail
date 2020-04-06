@@ -31,3 +31,8 @@ if (document.querySelector('.text-center')) {
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+// modal options
+$('#reviewModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})

@@ -1,0 +1,16 @@
+.modal-content {
+  background-color: $card-info;
+}
+
+.close {
+  color: white;
+  text-shadow: 0 1px 0 #f2e5c4;
+  &:hover {
+    color: white;
+  }
+}
+
+.fa-star:before {
+  color: $yellow;
+  padding-right: 12px;
+}

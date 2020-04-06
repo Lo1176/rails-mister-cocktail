@@ -11,14 +11,21 @@
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@cocktail.photo.key, height: 300, width: 400, crop: :fill) %>)">
       </div>
       <div class="card-border">
-        <h5>Reviews</h5>
+        <ligne class="addReviews">
+          <h5>Reviews</h5>
+          <button type="button" class="btn btn-inline-info" data-toggle="modal" data-target="#reviewModal">
+            +
+          </button>
+
+        </ligne>
+
         <% if @cocktail.reviews.empty? %>
           <p>Be the first to let a review</p>
         <% else %>
           <ul>
             <% @cocktail.reviews.each do |review| %>
               <li>
-                <span> class="badge badge-primary badge-pill
+                <span class="glyphicon glyphicon-star" aria-hidden="true"><%= review.rating %>
 
                 </span>
                 <%= review.content %>
@@ -30,8 +37,14 @@
         <% end %>
 
       </div>
-      <!-- <div class="modal"> -->
+      <!-- Button trigger modal -->
+      <!-- Modal -->
 
+
+
+      <!--  -->
+      <!-- <div class="modal"> -->
+        <%= render 'reviews/new', cocktail: @cocktail, review: @review %>
 
       <!-- </div> -->
     </div>
@@ -57,7 +70,6 @@
       </div>
     </div>
   </div>
-  <%= render 'reviews/new', cocktail: @cocktail, review: @review %>
 </div>
 
-<%= render 'shared/footer', content_for(:footer_class, 'footer-new') %>
+<%#= render 'shared/footer', content_for(:footer_class, 'footer-new') %>
