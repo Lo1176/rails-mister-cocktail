@@ -8,7 +8,7 @@
   background-size: cover;
   background-position: center;
   height: 180px;
-  width: 272px;
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@
 }
 
 .card-info {
-  width: 336px;
+  width: 356px;
   justify-content: center;
   background-color: $card-info;
   border-radius: 5px;
@@ -68,6 +68,7 @@
   border-radius: 5px;
   padding: 0.75rem;
   margin: 0 4px 8px;
+  min-height: 160px;
     a {
       color: #F2E5C4;
     }
