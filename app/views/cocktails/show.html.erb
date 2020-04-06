@@ -13,20 +13,23 @@
       <div class="card-border">
         <ligne class="addReviews">
           <h5>Reviews</h5>
-          <% if @cocktail.reviews.empty? %>
-            <%= "0" %>
-          <% else
-            ratings = []
-              @cocktail.reviews.each do |review|
-                ratings << review.rating
-              end %>
-          <%= ratings.sum.fdiv(ratings.size) %>
+          <button type="button" class="btn btn-inline-info" data-toggle="modal" data-target="#reviewModal">+</button>
+        </ligne>
+        <ligne class="average">
+          <p>Moyenne : </p>
+          <p>
+            <% if @cocktail.reviews.empty? %>
+              <%= "0" %>
+            <% else
+              ratings = []
+                @cocktail.reviews.each do |review|
+                  ratings << review.rating
+                end %>
+            <%= ratings.sum.fdiv(ratings.size) %>
 
 
-          <% end %>
-          <button type="button" class="btn btn-inline-info" data-toggle="modal" data-target="#reviewModal">
-            +
-          </button>
+            <% end %>
+          </p>
 
         </ligne>
 

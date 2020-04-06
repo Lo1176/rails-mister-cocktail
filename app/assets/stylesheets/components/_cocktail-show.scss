@@ -16,6 +16,13 @@
   justify-content: space-between;
 }
 
+.average {
+  display: flex;
+    p {
+      margin-right: 4px;
+    }
+}
+
 .li-review {
   padding-left: 0;
     li {
