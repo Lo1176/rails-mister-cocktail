@@ -39,7 +39,8 @@
           <ul class="li-review">
             <% @cocktail.reviews.each do |review| %>
               <li>
-                <span class="fas fa-star" aria-hidden="true"><%= review.rating %>
+                <span><%= review.rating %></span>
+                <span class="fas fa-star" aria-hidden="true">
 
                 </span>
                 <%= review.content %>
