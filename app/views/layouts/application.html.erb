@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pimp my Cocktails</title>
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= favicon_link_tag %>
     <!-- <link rel="shortcut icon" href="http://www.votresite.com/favicon.ico"> -->
 
-
-    <meta name="description" content="Create your own cocktails">
-    <meta property="og:image"content="cocktailHome.jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
