@@ -2,3 +2,4 @@ meta_product_name: "Pimp Your Cocktails"
 meta_title:  "Pimp Your Cocktails"
 meta_description: "Create your own cocktails"
 meta_image: "cocktailHome.jpeg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
